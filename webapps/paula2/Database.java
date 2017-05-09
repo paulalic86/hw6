@@ -35,14 +35,14 @@ public class Database{
   public void insertData(String account,String password,String name,String birth,String email,String phone){
     try{
       String sql = "insert into person(account,password,name,birth,email,phone) value(?,?,?,?,?,?)";
-      PreparedStatement ps = con.prepareStatement(sql);
-      ps.setString(1,account);
-      ps.setString(2,password);
-      ps.setString(3,name);
-      ps.setString(4,birth);
-      ps.setString(5,email);
-      ps.setString(6,phone);
-      int a = ps.executeUpdate();
+      PreparedStatement qq = con.prepareStatement(sql);
+      qq.setString(1,account);
+      qq.setString(2,password);
+      qq.setString(3,name);
+      qq.setString(4,birth);
+      qq.setString(5,email);
+      qq.setString(6,phone);
+      int x = qq.executeUpdate();
     }catch(Exception ex){
       System.out.println(ex);
     }

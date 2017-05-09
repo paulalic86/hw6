@@ -35,7 +35,7 @@
         <form action="member.jsp" method="post">
           <input name="account" type="text" placeholder="帳號" autocomplete="off" autofocus required/>
           <br>
-          <input name="password" id="password" type="password" placeholder="密碼" pattern="[A-Za-z0-9]{6,12}" title="請輸入6-12英文字母或數字" required/>
+          <input name="password" id="password" type="password" placeholder="密碼"/>
           <br>
           <input name="name" type="text" placeholder="姓名" autocomplete="off"/>
           <br>

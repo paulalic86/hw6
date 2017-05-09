@@ -15,7 +15,7 @@
         <form action="member.jsp" method="post">
           <input type="text" name="account" id="username" placeholder="帳號" autocomplete="off" autofocus required />
           <br>
-          <input type="password" name="password" id="password" placeholder="密碼" required pattern="[A-Za-z0-9]{6,12}" title="請輸入6-12英文字母或數字"/>
+          <input type="password" name="password" id="password" placeholder="密碼"/>
           <br>
           <input type="submit" value="登入"/>
           <input type="button" onclick="window.open('new.jsp','_self')" value="註冊"/>

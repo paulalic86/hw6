@@ -35,10 +35,10 @@
          }
        }
        if(y!=0){
-         message="註冊失敗";
+         message="註冊失敗!";
        }else{
          database.insertData(account,password,name,birth,email,phone);
-         message="註冊成功";
+         message="註冊成功!";
          }
        }
      }catch(Exception ex){
@@ -60,7 +60,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>會員管理</title>
+    <title>Member</title>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
     <link rel="stylesheet" href="mystyle.css">
   </head>
@@ -74,20 +74,20 @@
             while(rs.next()){
               if(account.equals(rs.getString("account"))){
                 if(password.equals(rs.getString("password"))){
-                  String namet=rs.getString("name");
-                  String birtht=rs.getString("birth");
-                  String emailt=rs.getString("email");
-                  String phonet=rs.getString("phone");
+                  String name1=rs.getString("name");
+                  String birth1=rs.getString("birth");
+                  String email1=rs.getString("email");
+                  String phone1=rs.getString("phone");
                   %>
-                  姓名：<%=namet%>
+                  姓名：<%=name1%>
                   <br>
-                  生日：<%=birtht%>
+                  生日：<%=birth1%>
                   <br>
-                  E-Mail：<%=emailt%>
+                  信箱：<%=email1%>
                   <br>
-                  電話號碼：<%=phonet%>
+                  電話號碼：<%=phone1%>
                   <br>
-                  <input type="button" id="login" onclick="window.open('index.jsp','_self')" value="回到登入畫面"/>
+                  <input type="button" id="login" onclick="window.open('index.jsp','_self')" value="返回登入畫面"/>
                   <%
                   x+=1;
                   break;
@@ -102,7 +102,7 @@
             <input type="button" onclick="window.open('new.jsp','_self')" value="創建新賬號"/>
         <%}%>
           <%if(y!=0){%>
-            <p>帳號已被使用</p>
+            <p>帳號已被使用!</p>
             <br>
             <input type="button" onclick="history.back()" value="返回註冊頁面"/>
             <input type="button" onclick="window.open('index.jsp','_self')" value="回到登入畫面"/>
